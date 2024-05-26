@@ -3,8 +3,9 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
+import Note2 from '~/components/widgets/Note2.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
+// import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
@@ -12,13 +13,17 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
-const metadata = {
+import HeroText from '~/components/widgets/HeroText.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+
+const metadata1 = {
   title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
   ignoreTitleTemplate: true,
 };
 ---
 
-<Layout metadata={metadata}>
+<Layout metadata={metadata1}>
   <!-- Hero Widget ******************* -->
 
   <Hero
@@ -35,18 +40,17 @@ const metadata = {
     image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 4.0</span> + Tailwind CSS
+      Unleashing the Power of <span class="hidden xl:inline"></span>
+      <span class="text-accent dark:text-white highlight"> AI for Law</span> Professionals
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 4.0
-        + Tailwind CSS.</span
+        <span class="font-semibold">Intellify.</span> The future of legal innovation is here.
+        Harness AI-driven insights, automation, and predictive analytics
+        to transform your legal workflows and decision-making</span
       >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
-      Blogs.
+      
     </Fragment>
   </Hero>
 
@@ -59,43 +63,43 @@ const metadata = {
   <Features
     id="features"
     tagline="Features"
-    title="What you get with AstroWind"
+    title="What you get with Intellify?"
     subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: 'Legal Research & Analysis',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
+          'Intellify AI model is trained on a vast database of legal judgments, books, research papers, and articles.It can quickly analyze complex legal prompts, break them down into smaller tasks, and provide comprehensive research insights.',
         icon: 'tabler:brand-tailwind',
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'Law GPT',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
+          'Intellify Offers comprehensive legal research by training its AI on extensive legal data, functioning as a mini AGI that efficiently processes complex prompts without hallucinations.',
         icon: 'tabler:components',
       },
       {
-        title: 'Best Practices',
+        title: 'Trademark/IP Protection',
         description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
+          'Intellify Utilize AI for trademark/IP protection by automating searches, monitoring infringements, and ensuring robust IP management.',
         icon: 'tabler:list-check',
       },
       {
-        title: 'Excellent Page Speed',
+        title: 'Marketplace for Lawyers',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
+          'Lawyers will get access to list themselves on our website. A normal citizen can choose their lawyer according to his/her needs',
         icon: 'tabler:rocket',
       },
       {
-        title: 'Search Engine Optimization (SEO)',
+        title: 'Intelligent Contract Drafting',
         description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
+          "Intellify can assist in drafting and reviewing legal contracts.It suggests relevant clauses, identifies potential risks, and ensures compliance with legal standards and best practices.",
         icon: 'tabler:arrows-right-left',
       },
       {
-        title: 'Open to new ideas and contributions',
+        title: 'Transliteration',
         description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
+          'Intellify transliteration capabilities to facilitate cross-border transactions and maintain accuracy in legal documents.Its AI model can standardize legal terms, transliterate documents across multiple languages, and make legal information accessible globally.',
         icon: 'tabler:bulb',
       },
     ]}
@@ -105,23 +109,23 @@ const metadata = {
 
   <Content
     isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
+    tagline="Inside Product"
+    title="Why choose Intellify?"
     items={[
       {
-        title: 'Built on top of Astro 4.0',
+        title: 'Cost and Time Efficiency',
         description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+          'By automating routine legal tasks, such as legal research, document review, and contract analysis, Intellify significantly reduces the time and resources required. This translates into substantial cost savings for your organization.',
       },
       {
-        title: 'Styled using Tailwind CSS',
+        title: 'Data-Driven Insights',
         description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+          'Intellify analyzes vast legal data to uncover patterns, trends, and insights.These data-driven insights empower your legal professionals to make informed decisions, mitigate risks, and gain a competitive advantage in complex legal matters.',
       },
       {
-        title: 'Cross-browser compatibility',
+        title: 'Streamlined Legal Processes and Increased Efficiency',
         description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+          'From intelligent contract drafting to comprehensive IP protection, Intellify streamlines legal workflows, allowing your team to focus on high-value, strategic work.',
       },
     ]}
     image={{
@@ -139,102 +143,28 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
-      },
-      {
-        title: 'Multiple layout possibilities',
-        description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
-      },
-      {
-        title: 'Fully responsive design',
-        description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
-      },
-      {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
-    }}
-  >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Enhanced user engagement',
-        description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
-      },
-      {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
-      },
-      {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
-    }}
-  >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
 
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    title="Get the amazing Intellify up and running in no time."
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
+        title: 'Step 1: <span class="font-medium">Use Free version</span>',
         description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
+          "Start your journey with LegalBrain by taking advantage of our free trial. Explore our cutting-edge AI solutions, from intelligent legal research to automated drafting, without any commitment. Experience firsthand how our AI can revolutionize your legal practice.",
         icon: 'tabler:package',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</em>',
+        title: 'Step 2: <span class="font-medium">Get in Touch With us</em>',
         description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
+          "Interested in taking your legal operations to the next level? Get in touch with our experts to discuss your specific needs and budget. We'll provide personalized recommendations and pricing options tailored to your requirements, ensuring you get the most value from LegalBrain's AI solutions.",
         icon: 'tabler:letter-case',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
+        title: 'Step 3: <span class="font-medium">Integrate your data with us</span>',
         description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
+          'Unlock the full potential of Intellify AI by seamlessly integrating your existing legal data and systems. Our advanced integration capabilities ensure a smooth transition, allowing you to leverage the power of our AI solutions without disrupting your workflows. Connect your data and experience unparalleled efficiency.',
         icon: 'tabler:paint',
       },
       {
@@ -249,69 +179,187 @@ const metadata = {
   />
 
   <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
-    items={[
-      {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
-
+    <Note2 />
+  
+    <HeroText
+      tagline="Pricing"
+      title="Stellar Pricing for Everyone"
+      subtitle="Choose the perfect plan that aligns with your legal goals."
+    />
+  
+    <!-- Pricing Widget ******************* -->
+  
+    <Prices
+      title="Our prices"
+      subtitle="Only pay for what you need"
+      prices={[
+        {
+          title: 'Individual',
+          subtitle: 'Optimal choice for personal use',
+          price: 30000,
+          period: 'per year',
+          items: [
+            {
+              description: 'Chat With Docs',
+            },
+            {
+              description: 'Drafting',
+            },
+            {
+              description: 'Transliteration',
+            },
+          ],
+          callToAction: {
+            target: '_blank',
+            text: 'Get started',
+            href: '#',
+          },
+        },
+        {
+          title: 'Premium',
+          subtitle: 'Optimal choice for small/large firms',
+          price: 45000,
+          period: 'Per year',
+          items: [
+            {
+              description: 'Chat With Docs',
+            },
+            {
+              description: 'Drafting',
+            },
+            {
+              description: 'Transliteration',
+            },
+            {
+              description: 'LawGPT',
+            },
+            
+          ],
+          callToAction: {
+            target: '_blank',
+            text: 'Get started',
+            href: '#',
+          },
+          hasRibbon: true,
+          ribbonTitle: 'popular',
+        },
+        {
+          title: 'Platinum',
+          subtitle: 'Optimal choice for large firms',
+          price: 60000,
+          period: 'Per year',
+          items: [
+            {
+              description: 'Drafting',
+            },
+            {
+              description: 'Chat With Docs',
+            },
+            {
+              description: 'Transliteration',
+            },
+            {
+              description: 'LawGPT',
+            },
+            {
+              description: 'IP/Trademark Protection',
+            },
+            {
+              description: 'Litigation',
+            },
+          ],
+          callToAction: {
+            target: '_blank',
+            text: 'Get started',
+            href: '#',
+          },
+        },
+      ]}
+    />
+  
+    <!-- Features3 Widget ************** -->
+  
+    <Features3
+      title="Price-related features"
+      subtitle="Discover the advantages of choosing our plans"
+      columns={2}
+      items={[
+        {
+          title: 'Tiered Pricing Plans',
+          description: 'Choose from a range of pricing plans designed to accommodate different budgets and requirements.',
+          icon: 'tabler:stairs',
+        },
+        {
+          title: 'Transparent Pricing',
+          description: 'Clearly displayed pricing details for each plan, with no hidden costs or unexpected charges.',
+          icon: 'tabler:flip-vertical',
+        },
+        {
+          title: 'Secure Payment Methods',
+          description: 'Secure payment gateways to protect your financial information during transactions.',
+          icon: 'tabler:shield-lock',
+        },
+        {
+          title: 'Instant Access',
+          description: `Immediate access to your chosen plan's features and templates upon subscription.`,
+          icon: 'tabler:accessible',
+        },
+        {
+          title: 'Upgrade Value',
+          description: 'Upgrade to higher-tier plans to unlock more features and benefits for an enhanced experience.',
+          icon: 'tabler:chevrons-up',
+        },
+        {
+          title: '24H support',
+          description: 'Questions answered via live chat, email or phone, every calendar day.',
+          icon: 'tabler:headset',
+        },
+      ]}
+      classes={{ container: 'max-w-5xl' }}
+    />
+  
+    <!-- Steps Widget ****************** -->
+  
+    <Steps
+      title="A guided journey from plans to creativity"
+      tagline="simplified process"
+      isReversed={true}
+      items={[
+        {
+          title: 'Explore plans',
+          icon: 'tabler:number-1',
+        },
+        {
+          title: 'Select a plan',
+          icon: 'tabler:number-2',
+        },
+        {
+          title: 'Sign Up / Log In',
+          icon: 'tabler:number-3',
+        },
+        {
+          title: 'Review order',
+          icon: 'tabler:number-4',
+        },
+        {
+          title: 'Enter payment details',
+          icon: 'tabler:number-5',
+        },
+        {
+          title: 'Confirmation',
+          icon: 'tabler:number-6',
+        },
+        {
+          title: 'Download and start using the template(s)',
+          icon: 'tabler:number-7',
+        },
+      ]}
+      image={{
+        src: 'https://images.unsplash.com/photo-1536816579748-4ecb3f03d72a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+        alt: 'Steps image',
+      }}
+    />
+  
   <!-- HighlightedPosts Widget ******* -->
 
   <BlogLatestPosts
